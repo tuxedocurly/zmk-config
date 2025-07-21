@@ -17,14 +17,14 @@
         diode-direction = "col2row";
         wakeup-source;
 
-        // col-gpios
-        //     = <&gpio0 24 GPIO_ACTIVE_HIGH>
-        //     , <&gpio1 0 GPIO_ACTIVE_HIGH>
-        //     , <&gpio0 11 GPIO_ACTIVE_HIGH>
-        //     , <&gpio1 4 GPIO_ACTIVE_HIGH>
-        //     ;
+        col-gpios
+            = <&gpio0 24 GPIO_ACTIVE_HIGH>
+            // , <&gpio1 0 GPIO_ACTIVE_HIGH>
+            // , <&gpio0 11 GPIO_ACTIVE_HIGH>
+            // , <&gpio1 4 GPIO_ACTIVE_HIGH>
+            ;
 
-        // row-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
     default_transform: keymap_transform0 {
@@ -33,7 +33,7 @@
         rows = <1>; // Length of the "row-gpios" array
         map = <
         //   Key 1 | Key 2 | Key 3 | Key 4
-           RC(0,0) RC(0,1) RC(0,2) RC(0,3)
+           RC(0,0) //RC(0,1) RC(0,2) RC(0,3)
         >;
     };
 
